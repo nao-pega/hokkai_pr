@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ</title>
+    
+    <!-- 既存の共通CSSを読み込みます -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toiawase.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>お問い合わせ</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="gurume.html">グルメ・特産品</a>
+        <a href="zekkei.html">絶景スポット</a>
+        <a href="toiawase.html">お問い合わせ</a>
+    </nav>
+
+    <main>
+        <div id="contact-container">
+            <h2>お問い合わせフォーム</h2>
+            <form id="contact-form">
+                
+                <div class="form-group">
+                    <label for="email">メールアドレス (必須)</label>
+                    <input type="email" id="email" name="email" required placeholder="example@hokkaido.jp">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容 (必須)</label>
+                    <textarea id="message" name="message" required placeholder="お問い合わせ内容を具体的にお書きください。"></textarea>
+                </div>
+                
+                <button type="submit" id="submit-button">送信する</button>
+
+            </form>
+            
+            <!-- 送信完了メッセージ -->
+            <div id="message-area">
+                お問い合わせありがとうございます。送信が完了しました。
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 nao 北海道魅力PR</p>
+    </footer>
+
+    <!-- main.jsを読み込む -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            // フォームの本来の送信動作（ページ遷移）をキャンセル
+            event.preventDefault();
+            
+            // シンプルな送信シミュレーション
+            // 実際にはここでサーバーにデータを送る処理（fetch APIなど）を書きます
+
+            // フォームを非表示にし、完了メッセージを表示
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('message-area').style.display = 'block';
+
+            // （オプション）3秒後にフォームをリセットして再表示する場合は、以下のコメントを解除
+            /*
+            setTimeout(() => {
+                document.getElementById('contact-form').style.display = 'block';
+                document.getElementById('message-area').style.display = 'none';
+                document.getElementById('contact-form').reset(); // フォーム内容をクリア
+            }, 3000);
+            */
+        });
+    </script>
+</body>
+</html>

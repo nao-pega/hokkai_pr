@@ -1,0 +1,88 @@
+/* ==================================
+    お問い合わせフォーム専用スタイル
+    ================================== */
+#contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-container h2 {
+    text-align: center;
+    color: #004d99;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0f7fa;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #003366;
+}
+
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* paddingを含めた幅にする */
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* 縦方向のみリサイズ可能 */
+    min-height: 150px;
+}
+
+#submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #008cba; /* 青系のボタン */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-button:hover {
+    background-color: #005aab;
+}
+
+/* 送信完了メッセージのスタイル */
+#message-area {
+    text-align: center;
+    color: #2e8b57; /* 緑色 */
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid #2e8b57;
+    border-radius: 5px;
+    display: none; /* 初期状態では非表示 */
+}
+
+/* ==================================
+   フッター
+   ================================== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    
+    /* 修正: 画面下部に固定 (設定を削除しました) */
+}
