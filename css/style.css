@@ -229,3 +229,38 @@ footer {
         border-bottom: none;
     }
 }
+
+/* ==================================
+   雪のエフェクト (Snow Effect)
+   ================================== */
+
+.snow {
+    position: fixed; /* 画面全体を覆う */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* 雪の下の要素をクリックできるようにする */
+    z-index: 1000; /* 最前面に表示 */
+}
+
+/* 個々の雪の粒の見た目とアニメーション */
+.snowflake {
+    position: absolute;
+    width: 5px; /* 雪の粒のサイズ */
+    height: 5px;
+    background: white; /* 雪の色 */
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite; /* fallという名前のアニメーションを線形に無限に繰り返す */
+}
+
+/* 雪が降るアニメーションの定義 */
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh); /* 画面外の上からスタート */
+    }
+    100% {
+        transform: translateY(100vh); /* 画面外の下まで移動 */
+    }
+}
